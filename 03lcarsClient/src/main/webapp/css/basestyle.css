@@ -1,0 +1,221 @@
+:root {
+	--topcolor: #a8bdec;
+	--bottomcolor: #f7e275;
+	--contentwidth: 1060px;
+	--sidebarwidth: 100px;
+	--outercurveradius: 50px;
+	--innercurveradius: 25px;
+	--topfooter: 10px;
+	--bottomheader: 50px;
+}
+
+@font-face {
+	font-family: 'lcars-font01';
+	src: url('../fonts/Context_Ultra_Condensed.ttf') format("truetype");
+	/*font-weight: 400;*/
+}
+
+@font-face {
+	font-family: 'lcars-font02';
+	src: url('../fonts/Nova_Light_Ultra.ttf') format("truetype");
+	/*font-weight: 400;*/
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: black;
+	height: 100%;
+	user-select: none; /* Standard */
+}
+
+#maincontent {
+	position: relative;
+	height: 100%;
+	width: var(--contentwidth);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#topbox {
+	position: relative;
+	height: 270px;
+	background-color: var(--topcolor);
+	border-radius: 0px 0px 0px var(--outercurveradius);
+}
+
+#topcontent {
+	position: absolute;
+	background-color: black;
+	top: 0px;
+	right: 0px;
+	left: var(--sidebarwidth);
+	bottom: var(--topfooter);
+	border-radius: 0px 0px 0px var(--innercurveradius);
+	padding-top: var(--innercurveradius);
+	padding-left: var(--innercurveradius);
+	padding-bottom: var(--innercurveradius);
+}
+
+.returndiv {
+	font-family: lcars-font02;
+	font-size: 2em;
+	color: var(--topcolor);
+}
+
+.topsegment>div {
+	display: inline-block;
+	vertical-align: top;
+	/*
+	border: 1px red solid;
+	*/
+}
+
+.topsegment .head {
+	width: 15%;
+}
+
+.topsegment .formdiv {
+	width: 40%;
+}
+
+.topsegment form label {
+	display: inline-block;
+	width: 25%;
+}
+
+.topsegment form input {
+	display: inline-block;
+	width: 70%;
+	font-family: lcars-font02;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	background-color: black;
+	border: 1px solid var(--topcolor);
+	color: var(--topcolor);
+}
+
+.formdiv select {
+	font-family: lcars-font02;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	background-color: black;
+	color: var(--topcolor);
+}
+
+.topsegment form input.classradio {
+	display: inline-block;
+	width: 5%;
+	margin-left: 5px;
+}
+
+.formdiv .submit input {
+	float: right;
+	width: 40%;
+	margin-top: 5px;
+	color: black;
+	margin-right: 15px;
+	border: 1px solid var(--topcolor);
+	border-radius: 15px;
+	background-color: var(--topcolor);
+}
+
+#bottombox {
+	position: absolute;
+	top: 275px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: var(--bottomcolor);
+	border-radius: var(--outercurveradius) 0px 0px 0px;
+}
+
+#bottomcontent {
+	position: absolute;
+	background-color: black;
+	border-radius: var(--innercurveradius) 0px 0px 0px;
+	top: var(--bottomheader);
+	bottom: 0px;
+	left: var(--sidebarwidth);
+	right: 0px;
+	padding-top: var(--innercurveradius);
+	padding-left: var(--innercurveradius);
+	padding-bottom: var(--innercurveradius);
+}
+
+#bottomdata {
+	height: 100%;
+	overflow-y: auto;
+	font-family: lcars-font02;
+	font-size: 2em;
+	color: var(--topcolor);
+}
+
+#bottomdata table {
+	display: table;
+	width: 100%;
+	font-family: lcars-font02;
+	font-size: 1em;
+	text-transform: uppercase;
+	color: var(--topcolor);
+	text-align: left;
+}
+
+/* unvisited link */
+.segment a:link {
+	color: #777cff;
+}
+
+/* visited link */
+.segment a:visited {
+	color: #777cff;
+}
+
+#titleheader {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	height: var(--bottomheader);
+	background-color: black;
+	padding: 0px 10px;
+	color: var(--topcolor);
+	font-family: lcars-font01;
+	text-transform: uppercase;
+	font-size: var(--bottomheader);
+}
+
+#navmenu {
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	width: var(--sidebarwidth);
+	background-color: black;
+	padding-bottom: 2px;
+}
+
+.navbutton {
+	position: relative;
+	background-color: var(--bottomcolor);
+	width: 100%;
+	height: 75px;
+	margin-top: 2px;
+	box-sizing: border-box;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.navbutton p {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	font-size: 2em;
+	font-family: lcars-font01;
+	text-transform: uppercase;
+}
